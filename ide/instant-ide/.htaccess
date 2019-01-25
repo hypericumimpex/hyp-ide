@@ -1,0 +1,28 @@
+
+# deny all except those indicated here
+#<Limit GET POST>
+#	Order Allow,Deny
+#	Allow from 12.345.67.890
+#	Allow from 09.876.54.321
+#</Limit>
+
+# password protect iIDE directory
+#AuthName "Admins Only"
+#AuthUserFile /server/path/to/.htpasswd
+#AuthGroupFile /dev/null
+#AuthType basic
+#Require valid-user
+
+# force https
+#RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+# whitelist the iIDE directory
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !/.*
+</IfModule>
+
+# disable indexing of directories
+Options -Indexes

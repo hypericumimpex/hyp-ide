@@ -1,0 +1,1690 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+
+/* # Box Sizing
+================================================== */
+
+html,
+input[type="search"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff;
+	font-size: 13px;
+	font-family: "Open Sans",sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+body.instant-ide-theme-dark {
+	background: #333;
+}
+
+p, ul, ol, blockquote, input, select {
+	font-size:12px;
+}
+
+a, a:link, a:visited {
+	color: #0074A2;
+	text-decoration: none;
+}
+
+a:hover, a:active  {
+	color: #2EA2CC;
+	text-decoration: none;
+}
+
+#instant-ide-inside-iframe-overlay {
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 100;
+}
+
+#instant-ide-inside-iframe-overlay a {
+	background: #eee;
+	border: 1px solid #ddd;
+	width: 400px;
+	margin: 5% auto 0;
+	padding: 20px;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 4px;
+	display: block;
+}
+
+.instant-ide-loading .instant-ide-settings-wrap {
+	background: #555;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.instant-ide-loading #instant-ide-file-editor-loading {
+	position: absolute;
+	top: calc(50% - 100px);
+	left: calc(50% - 100px);
+}
+
+.instant-ide-theme-dark #instant-ide-file-tree-editor-container a,
+.instant-ide-theme-dark #instant-ide-file-tree-editor-container a:link,
+.instant-ide-theme-dark #instant-ide-file-tree-editor-container a:visited {
+	color: #eee;
+}
+
+.instant-ide-theme-dark #instant-ide-file-tree-editor-container a:hover,
+.instant-ide-theme-dark #instant-ide-file-tree-editor-container a:active {
+	color: #fff;
+}
+
+.instant-ide-settings-wrap {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+.instant-ide-settings-wrap,
+.instant-ide-settings-wrap h3,
+.instant-ide-optionbox-outer-1col,
+.instant-ide-optionbox-inner-1col,
+.instant-ide-optionbox-outer-2col,
+.instant-ide-optionbox-inner-2col,
+.instant-ide-child-theme-export-wrap,
+.instant-ide-tabby-textarea,
+.notice-box {
+	width: 100%;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-settings-wrap h3 {
+	border:0;
+	border-bottom: 1px solid #ddd;
+	margin: 0;
+	padding: 8px 0;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	clear: both;
+}
+
+.instant-ide-settings-wrap h3,
+.instant-ide-optionbox-outer-2col {
+	background: #FFFFFF;
+	border: 1px solid #DFDFDF;
+	border-right: 0;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.instant-ide-optionbox-inner-2col h4 {
+	background: #FFFFFF;
+	border-bottom: 1px solid #F0F0F0;
+	color: #222222;
+	font-size: 14px;
+	margin: 0 0 10px;
+	padding: 8px 0;
+	text-align: center;
+}
+
+.instant-ide-optionbox-inner-1col {
+	background: #FFFFFF;
+	border: 1px solid #DFDFDF;
+	margin: 0;
+	padding: 0;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.instant-ide-optionbox-inner-1col {
+	background: none;
+	border: none;
+}
+
+.instant-ide-optionbox-outer-2col {
+	background: #FFFFFF;
+	border: 1px solid #DFDFDF;
+	margin: 0 0 15px;
+	padding: 0;
+	float: left;
+}
+
+.instant-ide-optionbox-inner-2col {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.instant-ide-optionbox-2col-left-wrap {
+	width: 49%;
+	float: left;
+}
+
+.instant-ide-optionbox-2col-right-wrap {
+	width: 49%;
+	float: right;
+}
+
+#instant-ide-settings-nav-info-box .instant-ide-optionbox-2col-left-wrap {
+	width: 39%;
+}
+
+#instant-ide-settings-nav-info-box .instant-ide-optionbox-2col-right-wrap {
+	width: 59%;
+}
+
+.instant-ide-child-theme-export-2col-left,
+.instant-ide-child-theme-export-2col-right {
+	width: 47%;
+	margin: 10px;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-child-theme-export-2col-right {
+	float: right;
+}
+
+#instant-ide-file-editor-options-overlay,
+#instant-ide-file-editor-upload-form-overlay,
+#instant-ide-file-editor-image-view-overlay{
+	background: #000;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 101;
+	opacity: .3;
+}
+
+#instant-ide-file-editor-options-container,
+#instant-ide-file-editor-upload-form-container,
+#instant-ide-file-editor-image-view-container {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 102;
+}
+
+#instant-ide-file-editor-options-container i,
+#instant-ide-file-editor-upload-form-container i,
+#instant-ide-file-editor-image-view-container i {
+	margin: 5px -13px 0 0;
+	color: #666;
+	font-size: 24px;
+	float: right;
+}
+
+#instant-ide-file-editor-upload-form-container i {
+	margin: -15px -13px 0 0;
+}
+
+#instant-ide-file-editor-image-view-container #instant-ide-image-view-info-link i {
+	margin: 0;
+	font-size: 14px;
+	float: none;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-options-container i,
+.instant-ide-theme-dark #instant-ide-file-editor-upload-form-container i,
+.instant-ide-theme-dark #instant-ide-file-editor-image-view-container i {
+	color: #eee;
+}
+
+#instant-ide-file-editor-options-container i:hover,
+#instant-ide-file-editor-upload-form-container i:hover,
+#instant-ide-file-editor-image-view-container i:hover {
+	color: #333;
+	cursor: pointer;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-options-container i:hover,
+.instant-ide-theme-dark #instant-ide-file-editor-upload-form-container i:hover,
+.instant-ide-theme-dark #instant-ide-file-editor-image-view-container i:hover {
+	color: #ccc;
+}
+
+#instant-ide-file-editor-options,
+#instant-ide-file-editor-upload-form,
+#instant-ide-file-editor-image-view {
+	background: #eee;
+	border: 1px solid #ddd;
+	width: 627px;
+	margin: 8% auto 0;
+	padding: 0 20px 20px;
+	overflow: hidden;
+}
+
+#instant-ide-file-editor-upload-form {
+	padding: 20px;
+}
+
+#instant-ide-file-editor-image-view {
+	width: 842px;
+	margin: 5% auto 0;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-options,
+.instant-ide-theme-dark #instant-ide-file-editor-upload-form,
+.instant-ide-theme-dark #instant-ide-file-editor-image-view {
+	background: #333;
+	border: 1px solid #222;
+}
+
+#instant-ide-file-upload-wrap {
+	margin-left: 10px;
+	color: #333;
+}
+
+.instant-ide-theme-dark #instant-ide-file-upload-wrap {
+	color: #eee;
+}
+
+#instant-ide-file-upload-progress:empty {
+	display: none;
+}
+
+#instant-ide-file-upload-progress {
+	background: #eee;
+	border: 1px solid #ddd;
+	width: 100%;
+	margin-top: 10px;
+	float: left;
+}
+
+.instant-ide-theme-dark #instant-ide-file-upload-progress {
+	background: #444;
+	border: 1px solid #333;
+}
+
+#instant-ide-file-upload-progress.ui-progressbar .ui-progressbar-value {
+	background: #ddd;
+	margin: 0;
+}
+
+.instant-ide-theme-dark #instant-ide-file-upload-progress.ui-progressbar .ui-progressbar-value {
+	background: #555;
+}
+
+#instant-ide-file-upload-progress .ui-widget-header {
+	border: 0;
+}
+
+#instant-ide-file-editor-options .instant-ide-menu-logo {
+	margin-top: -4px;
+}
+
+.monaco-editor-options-icon,
+.ace-editor-options-icon {
+	margin: 0 5px -4px 0;
+}
+
+#instant-ide-file-editor-options p,
+#instant-ide-file-editor-upload-form p,
+#instant-ide-file-editor-image-view p {
+	margin: 20px 0 0;
+	color: #333;
+	font-size: 14px;
+	float: left;
+}
+
+#instant-ide-file-editor-upload-form p {
+	margin: 0;
+}
+
+#instant-ide-file-editor-image-view h3 {
+	width: 100%;
+	background: #ddd;
+	border: 0;
+	border-radius: 4px;
+	margin: 10px 0;
+	color: #333;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-image-view h3 {
+	background: #222;
+	color: #fff;
+}
+
+#instant-ide-file-editor-image-view #instant-ide-file-editor-image-view-info {
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	overflow: hidden;
+	float: none;
+}
+
+#instant-ide-file-editor-image-view-info span {
+	background: #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	display: inline-block;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-image-view-info span {
+	background: #222;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-options p,
+.instant-ide-theme-dark #instant-ide-file-editor-upload-form p,
+.instant-ide-theme-dark #instant-ide-file-editor-image-view p {
+	color: #eee;
+}
+
+#instant-ide-file-editor-options p.instant-ide-col-one {
+	width: 100%;
+}
+
+#instant-ide-file-editor-options p.instant-ide-col-two {
+	width: 50%;
+}
+
+#instant-ide-file-editor-options-iide-theme input {
+	margin-left: 5px;
+}
+
+#instant-ide-file-editor-options input[type="text"] {
+	background: #fff;
+	border: 1px solid #ddd;
+	width: 190px;
+	padding: 3px;
+	color: #333;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-options input[type="text"] {
+	background: #444;
+	border: 1px solid #555;
+	color: #eee;
+}
+
+#instant-ide-upload-button {
+	margin-right: 20px;
+	float: right;
+}
+
+#instant-ide-monaco-editor-theme-preview,
+#instant-ide-ace-editor-theme-preview,
+#instant-ide-image-file-preview {
+	border: 1px solid #ddd;
+	max-width: 585px;
+	margin: 20px auto 0;
+	float: left;
+}
+
+#instant-ide-image-file-preview {
+	background: #fff;
+	max-width: 800px;
+	float: none;
+}
+
+.instant-ide-theme-dark #instant-ide-monaco-editor-theme-preview,
+.instant-ide-theme-dark #instant-ide-ace-editor-theme-preview,
+.instant-ide-theme-dark #instant-ide-image-file-preview {
+	border: 1px solid #222;
+}
+
+#instant-ide-monaco-editor-theme-preview img,
+#instant-ide-ace-editor-theme-preview img,
+#instant-ide-image-file-preview img {
+	width: 100%;
+	max-width: 583px;
+	height: auto;
+	display: block;
+}
+
+#instant-ide-image-file-preview img {
+	max-width: none;
+}
+
+#instant-ide-screenshot-image-upload-container {
+	background: #f5f5f5;
+	border: 1px solid #eee;
+	width: 180px;
+	padding: 5px;
+	text-align: center;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#instant-ide-screenshot-image-upload-container span {
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.instant-ide-file-editor-textarea-container {
+	height: 100%;
+	position: relative;
+	display: none;
+}
+
+.instant-ide-file-editor-textarea-container h3 {
+	height: 36px;
+	position: relative;
+}
+
+.instant-ide-file-editor-go-back-button {
+	background: #444;
+	padding: 3px 6px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.monaco-editor,
+.ace_content {
+	-webkit-font-smoothing: initial;
+}
+
+.instant-ide-monaco-theme-tomorrow-night-iide #instant-ide-file-editor-container .monaco-editor,
+.instant-ide-monaco-theme-tomorrow-night-iide #instant-ide-file-editor-container .monaco-editor-background,
+.instant-ide-monaco-theme-tomorrow-night-iide #instant-ide-file-editor-container .monaco-editor .inputarea.ime-input,
+.instant-ide-monaco-theme-tomorrow-night-iide #instant-ide-file-editor-container .monaco-editor .margin {
+	background-color: #2d2d2d;
+}
+
+.monaco-editor,
+.ace_editor {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#instant-ide-file-editor-top-border {
+	background: #027acc;
+	width: 100%;
+	height: 5px;
+}
+
+.instant-ide-menu-logo {
+	margin: -6px 0 0;
+	float: left;
+}
+
+#instant-ide-file-editor-menu {
+	border-top: 1px solid #ddd;
+	width: 100%;
+	height: 26px;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-menu {
+	background: #333;
+	border-top: 1px solid #222;
+	border-color: #222;
+	color: #eee;
+}
+
+#instant-ide-file-editor-menu ul {
+	margin: 0;
+	padding: 0 0 0 7px;
+	float: left;
+}
+
+#instant-ide-file-editor-menu ul li {
+	border: 1px solid #fff;
+	padding: 5px;
+	font-size: 12px;
+	display: inline-block;
+	list-style-type: none;
+	cursor: default;
+	position: relative;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-menu ul li {
+	border: 1px solid #333;
+}
+
+#instant-ide-file-editor-menu ul li:hover {
+	background: #eee;
+	border: 1px solid #eee;
+	border-top-color: #ddd;
+	border-bottom-color: #eee;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-menu ul li:hover {
+	background: #444;
+	border: 1px solid #222;
+	border-top-color: #666;
+	border-bottom-color: #444;
+}
+
+#instant-ide-file-editor-menu .sub-menu {
+	border: 1px solid #ddd;
+	border-top: 0;
+	width: 160px;
+	margin: 0 0 0 -1px;
+	padding: 0;
+	white-space: normal;
+	position: absolute;
+	z-index: 101;
+	display: block;
+	top: 24px;
+	left: -9999px;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-menu .sub-menu {
+	border: 1px solid #222;
+	border-top: 0;
+}
+
+#instant-ide-file-editor-menu li:hover > ul {
+	right: auto;
+	left: 0;
+}
+
+#instant-ide-file-editor-menu .sub-menu li {
+	background: #eee;
+	border: 0;
+	width: 100%;
+	padding: 8px 15px;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-menu .sub-menu li {
+	background: #444;
+	border: 0;
+}
+
+#instant-ide-file-editor-menu .sub-menu li:hover {
+	background: #ddd;
+	border: 0;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-menu .sub-menu li:hover {
+	background: #333;
+	border: 0;
+}
+
+#instant-ide-file-tree-editor-container {
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: fixed;
+	top: 31px;
+	left: 0;
+	z-index: 99;
+}
+
+#instant-ide-file-tree-container-wrap {
+	width: 20%;
+	height: -webkit-calc(100% - 31px);
+	height: calc(100% - 31px);
+	float: left;
+	position: relative;
+}
+
+#instant-ide-file-tree-container {
+	background: #fff;
+	border: 1px solid #ddd;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	float: left;
+}
+
+#instant-ide-file-tree-container ::-moz-selection {
+    color: #eee;
+    background: #6291c0;
+}
+
+#instant-ide-file-tree-container ::selection {
+    color: #eee;
+    background: #6291c0;
+}
+
+#instant-ide-file-tree-loaded {
+	position: relative;
+}
+
+#instant-ide-file-tree-container-wrap .instant-ide-file-tree-cog,
+#instant-ide-file-tree-editor-container .instant-ide-file-editor-cog {
+	font-size: 18px;
+	color: #666;
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	z-index: 1;
+}
+
+@-moz-document url-prefix() {
+	#instant-ide-file-tree-container-wrap .instant-ide-file-tree-cog {
+		right: 25px;
+	}
+}
+
+#instant-ide-file-tree-editor-container .instant-ide-file-editor-cog {
+	top: 7px;
+	right: 5px;
+}
+
+#instant-ide-file-tree-container-wrap .instant-ide-file-tree-cog:hover,
+#instant-ide-file-tree-editor-container .instant-ide-file-editor-cog:hover {
+	color: #aaa;
+	cursor: pointer;
+}
+
+#instant-ide-file-editor-tab-container {
+	width: 80%;
+	height: 34px;
+	background: #eee;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 0 25px 0 3px;
+	float: right;
+	position: relative;
+	z-index: 100;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+.instant-ide-file-tree-width-sm #instant-ide-file-tree-container-wrap {
+	width: 15%;
+}
+
+.instant-ide-file-tree-width-lg #instant-ide-file-tree-container-wrap {
+	width: 25%;
+}
+
+.instant-ide-file-tree-width-sm #instant-ide-file-editor-tab-container {
+	width: 85%;
+}
+
+.instant-ide-file-tree-width-lg #instant-ide-file-editor-tab-container {
+	width: 75%;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-tab-container {
+	background: #2d2d2d;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+}
+
+.instant-ide-file-editor-tab {
+	background: #eee;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+	max-width: 120px;
+	margin: 8px 0 0 -3px;
+	padding: 6px 6px 6px 12px;
+	color: #333;
+	font-size: 12px;
+	float: right;
+	-webkit-border-radius: 75px 20px 0px 0px / 150px 20px 0px 0px;
+	border-radius: 75px 20px 0px 0px / 150px 20px 0px 0px;
+	flex: 1 1 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.instant-ide-theme-dark .instant-ide-file-editor-tab {
+	background: #333;
+	border: 1px solid #222;
+	border-bottom: 0;
+	color: #eee;
+}
+
+.instant-ide-file-editor-tab-active {
+	background: #fff;
+	max-width: 140px;
+	z-index: 1;
+}
+
+.instant-ide-theme-dark .instant-ide-file-editor-tab-active {
+	background: #444;
+}
+
+.instant-ide-file-editor-tab-text {
+	width: calc(100% - 19px);
+	cursor: default;
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	float: left;
+}
+
+.instant-ide-file-editor-tab-quit:after {
+	border: 1px solid transparent;
+	margin-top: -3px;
+	padding: 2px;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	content: "\f00d";
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	float: right;
+}
+
+.instant-ide-file-editor-tab-quit.file-changed:after {
+	margin-top: -2px;
+	content: "\F044";
+}
+
+.instant-ide-file-editor-tab-quit.file-changed:hover:after,
+.instant-ide-file-editor-tab-quit:hover:after {
+	background: #eee;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	content: "\f00d";
+}
+
+.instant-ide-theme-dark .instant-ide-file-editor-tab-quit.file-changed:hover:after,
+.instant-ide-theme-dark .instant-ide-file-editor-tab-quit:hover:after {
+	background: #444;
+	border: 1px solid #222;
+}
+
+#instant-ide-file-editor-container {
+	border: 1px solid #ddd;
+	border-top: 0;
+	border-left: 0;
+	width: 80%;
+	height: 100%;
+	float: right;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-file-tree-width-sm #instant-ide-file-editor-container {
+	width: 85%;
+}
+
+.instant-ide-file-tree-width-lg #instant-ide-file-editor-container {
+	width: 75%;
+}
+
+.instant-ide-console-active #instant-ide-file-editor-container {
+	height: 80%;
+}
+
+.instant-ide-console-active.instant-ide-console-height-sm #instant-ide-file-editor-container {
+	height: 85%;
+}
+
+.instant-ide-console-active.instant-ide-console-height-lg #instant-ide-file-editor-container {
+	height: 75%;
+}
+
+#instant-ide-file-editor-console-container {
+	width: 80%;
+	height: 0;
+	position: fixed;
+	z-index: 103;
+	bottom: 0;
+	right: 0;
+	float: left;
+}
+
+.instant-ide-file-tree-width-sm #instant-ide-file-editor-console-container {
+	width: 85%;
+}
+
+.instant-ide-file-tree-width-lg #instant-ide-file-editor-console-container {
+	width: 75%;
+}
+
+.instant-ide-site-preview-active #instant-ide-file-editor-console-container {
+	width: 95%;
+	margin-left: 5%;
+}
+
+.instant-ide-console-active #instant-ide-file-editor-console-container {
+	height: 20%;
+}
+
+.instant-ide-console-active.instant-ide-console-height-sm #instant-ide-file-editor-console-container {
+	height: 15%;
+}
+
+.instant-ide-console-active.instant-ide-console-height-lg #instant-ide-file-editor-console-container {
+	height: 25%;
+}
+
+#instant-ide-file-editor-console {
+	background: #fff;
+	border: 0;
+	border-top: 1px solid #ddd;
+	width: 100%;
+	height: 100%;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-console {
+	background: #1e1e1e;
+	border-top: 1px solid #1e1e1e;
+}
+
+.instant-ide-site-preview-icons-container {
+	float: right;
+}
+
+.instant-ide-site-preview-icons-container i {
+	margin: 3px 5px 0 0;
+	color: #888;
+	font-size: 20px;
+}
+
+.instant-ide-site-preview-icons-container i:hover {
+	color: #ccc;
+	cursor: pointer;
+}
+
+#instant-ide-site-preview-icons-url-view {
+	color: #666;
+	font-size: 14px;
+	position: absolute;
+	top: 9px;
+	right: 170px;
+}
+
+#instant-ide-site-preview-icons-url-view-url {
+	width: 100%;
+	background: #ddd;
+	padding: 1px 4px;
+	display: inline-block;
+	border-radius: 2px;
+}
+
+.instant-ide-theme-dark #instant-ide-site-preview-icons-url-view {
+	width: 600px;
+	color: #ccc;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.instant-ide-theme-dark #instant-ide-site-preview-icons-url-view-url {
+	background: #444;
+}
+
+#instant-ide-site-preview-container {
+	background: #eee;
+	border-top: 1px solid #ddd;
+	width: 0;
+	height: calc(100% - 31px);
+	overflow: auto;
+	float: right;
+}
+
+.instant-ide-theme-dark #instant-ide-site-preview-container {
+	background: #333;
+	border-color: #222;
+}
+
+#instant-ide-site-preview {
+	background: #fff;
+	border: 0;
+	width: 100%;
+	min-width: 1300px;
+	height: 100%;
+	margin: 0 auto;
+	display: block;
+}
+
+.instant-ide-console-active #instant-ide-site-preview-container {
+	height: calc(80% - 31px);
+}
+
+.instant-ide-console-active.instant-ide-console-height-sm #instant-ide-site-preview-container {
+	height: calc(85% - 31px);
+}
+
+.instant-ide-console-active.instant-ide-console-height-lg #instant-ide-site-preview-container {
+	height: calc(75% - 31px);
+}
+
+.instant-ide-site-preview-active #instant-ide-file-tree-container-wrap {
+	width: 5%;
+	position: absolute;
+	z-index: 104;
+}
+
+.instant-ide-site-preview-active #instant-ide-file-editor-tab-container,
+.instant-ide-site-preview-active #instant-ide-file-editor-container {
+	width: 30%;
+	margin-left: 5%;
+	float: left;
+}
+
+.instant-ide-site-preview-active.instant-ide-site-preview-width-sm #instant-ide-file-editor-tab-container,
+.instant-ide-site-preview-active.instant-ide-site-preview-width-sm #instant-ide-file-editor-container {
+	width: 50%;
+}
+
+.instant-ide-site-preview-active.instant-ide-site-preview-width-md #instant-ide-file-editor-tab-container,
+.instant-ide-site-preview-active.instant-ide-site-preview-width-md #instant-ide-file-editor-container {
+	width: 40%;
+}
+
+.instant-ide-site-preview-active.instant-ide-site-preview-file-tree-active #instant-ide-file-tree-container-wrap {
+	width: 15%;
+}
+
+.instant-ide-site-preview-active #instant-ide-site-preview-container {
+	width: 65%;
+}
+
+.instant-ide-site-preview-active.instant-ide-site-preview-width-sm #instant-ide-site-preview-container {
+	width: 45%;
+}
+
+.instant-ide-site-preview-active.instant-ide-site-preview-width-md #instant-ide-site-preview-container {
+	width: 55%;
+}
+
+#instant-ide-file-editor-file-control-settings-icon {
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	height: 35px;
+	color: #aaa;
+	text-align: right;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-theme-dark #instant-ide-file-editor-file-control-settings-icon,
+.instant-ide-theme-dark #instant-ide-file-editor-file-control-form,
+.instant-ide-theme-dark #instant-ide-file-tree-container,
+.instant-ide-theme-dark #instant-ide-file-editor-container,
+.instant-ide-theme-dark #instant-ide-file-editor-reload-page,
+.instant-ide-theme-dark .instant-ide-file-tree li.iideft-file-dblclicked,
+.instant-ide-theme-dark .instant-ide-settings-wrap h3 {
+	background: #333;
+	border-color: #222;
+}
+
+.instant-ide-theme-dark .instant-ide-settings-button.button {
+	background: #444 !important;
+}
+
+.instant-ide-theme-dark #instant-ide-file-tree-container::-webkit-scrollbar,
+.instant-ide-theme-dark .ace_scrollbar-v::-webkit-scrollbar,
+.instant-ide-theme-dark .ace_scrollbar-h::-webkit-scrollbar {
+	background: #333;
+}
+
+.instant-ide-theme-dark #instant-ide-file-tree-container::-webkit-scrollbar,
+.instant-ide-theme-dark .ace_scrollbar-v::-webkit-scrollbar {
+	width: 10px;
+}
+
+.instant-ide-theme-dark .ace_scrollbar-h::-webkit-scrollbar {
+	height: 10px;
+}
+
+.instant-ide-theme-dark #instant-ide-file-tree-container::-webkit-scrollbar-thumb,
+.instant-ide-theme-dark .ace_scrollbar-v::-webkit-scrollbar-thumb,
+.instant-ide-theme-dark .ace_scrollbar-h::-webkit-scrollbar-thumb {
+	background: #4a4a4a;
+	border: 1px solid #4a4a4a;
+}
+
+.instant-ide-file-tree {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 10px 0 0 15px;
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	line-height: 1.5;
+	white-space: nowrap;
+	overflow: hidden;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-file-tree-short {
+	height: 100%;
+}
+
+.instant-ide-file-tree a:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.instant-ide-file-tree li {
+	margin: 0 10px;
+	padding: 3px 5px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	list-style-type: none;
+}
+
+.instant-ide-file-tree #iideft-root-directory {
+	margin-left: -5px;
+}
+
+.instant-ide-file-tree #iideft-root-directory a,
+.instant-ide-file-tree #iideft-root-directory a:hover {
+	color: #333;
+	cursor: default;
+}
+
+.instant-ide-theme-dark .instant-ide-file-tree #iideft-root-directory a,
+.instant-ide-theme-dark  #iideft-root-directory a:hover {
+	color: #eee;	
+}
+
+.instant-ide-file-tree li .iideft-directory-icon {
+	margin: 0 3px 0 -7px;
+	color: #333;
+}
+
+.instant-ide-file-tree li .fa.fa-caret-down.iideft-directory-icon {
+	margin: 0 5px 0 -9px;
+}
+
+.instant-ide-theme-dark .instant-ide-file-tree li .iideft-directory-icon {
+	width: 5px;
+	color: #eee;
+}
+
+.instant-ide-file-tree li.iideft-directory a {
+	background: url(images/folder-icon.png) no-repeat;
+	padding: 0 0 1px 25px;
+	cursor: pointer;
+}
+
+.instant-ide-file-tree li.iideft-directory ul {
+	padding: 5px 0 0;
+}
+
+.instant-ide-file-tree li.iideft-file a {
+	background: url(images/txt-icon.png) no-repeat;
+	padding: 1px 0 2px 24px;
+	color: #333;
+	text-decoration: none;
+	cursor: default;
+}
+
+.instant-ide-file-tree li.iideft-file a:hover {
+	color: #333;
+}
+
+.instant-ide-file-tree li.iideft-file-edit a {
+	color: #0074A2;
+	cursor: default;
+}
+
+.instant-ide-file-tree li.iideft-file-edit a:hover {
+	color: #2EA2CC;
+}
+
+.instant-ide-file-tree li.iideft-file-selected,
+.instant-ide-theme-dark .instant-ide-file-tree li.iideft-file-selected {
+	background: #6291c0;
+	display: inline-block;
+}
+
+.instant-ide-file-tree li.iideft-file-dblclicked {
+	background: #eee;
+}
+
+.instant-ide-theme-dark .instant-ide-file-tree li.iideft-file-dblclicked {
+	background: #262626;
+}
+
+.instant-ide-file-tree li.iideft-file-dblclicked a,
+.instant-ide-file-tree li.iideft-file-dblclicked a:hover {
+	color: #333;
+}
+
+.instant-ide-file-tree li.iideft-file-selected a,
+.instant-ide-file-tree li.iideft-file-selected a:hover,
+.instant-ide-theme-dark .instant-ide-file-tree li.iideft-file-selected a,
+.instant-ide-theme-dark .instant-ide-file-tree li.iideft-file-selected a:hover,
+.instant-ide-theme-dark .instant-ide-file-tree li.iideft-file-dblclicked a,
+.instant-ide-theme-dark .instant-ide-file-tree li.iideft-file-dblclicked a:hover {
+	color: #fff;
+}
+
+.instant-ide-file-tree li.iideft-file-dblclicked a,
+.instant-ide-file-tree li.iideft-file-dblclicked a:hover {
+	color: #333;
+}
+
+.instant-ide-file-tree li .iideft-folder-clicked,
+.instant-ide-file-tree li .iideft-folder-clicked:hover,
+.instant-ide-theme-dark .instant-ide-file-tree li .iideft-folder-clicked,
+.instant-ide-theme-dark .instant-ide-file-tree li .iideft-folder-clicked:hover {
+	color: #6291c0 !important;
+}
+
+.iideft-hidden {
+	display: none;
+}
+
+.instant-ide-file-tree-show-hidden .iideft-hidden {
+	display: block;
+}
+
+.instant-ide-file-tree li.ext-png a,
+.instant-ide-file-tree li.ext-jpg a,
+.instant-ide-file-tree li.ext-jpeg a,
+.instant-ide-file-tree li.ext-gif a,
+.instant-ide-file-tree li.ext-ico a,
+.instant-ide-file-tree li.ext-svg a,
+.instant-ide-file-tree li.ext-tif a,
+.instant-ide-file-tree li.ext-tiff a,
+.instant-ide-file-tree li.ext-psd a,
+.instant-ide-file-tree li.ext-bmp a {
+	background: url(images/image-icon.png) no-repeat;
+}
+
+.instant-ide-file-tree li.ext-css a,
+.instant-ide-file-tree li.ext-less a,
+.instant-ide-file-tree li.ext-sass a {
+	background: url(images/css-icon.png) no-repeat;
+}
+
+.instant-ide-file-tree li.ext-js a,
+.instant-ide-file-tree li.ext-json a {
+	background: url(images/js-icon.png) no-repeat;
+}
+
+.instant-ide-file-tree li.ext-php a {
+	background: url(images/php-icon.png) no-repeat;
+}
+
+.instant-ide-file-tree li.ext-xml a {
+	background: url(images/xml-icon.png) no-repeat;
+}
+
+.instant-ide-file-tree li.ext-zip a {
+	background: url(images/zip-icon.png) no-repeat;
+}
+
+.instant-ide-tabby-textarea .ace_search {
+	background: #eee;
+}
+
+.instant-ide-tabby-textarea .ace_search_form input,
+.instant-ide-tabby-textarea .ace_replace_form input {
+	border: 0;
+}
+
+.ace_tooltip {
+	color: #333;
+	font-size: 13px;
+}
+
+.ace_tooltip hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #fafafa;
+	margin: 0;
+}
+
+.instant-ide-tabby-textarea .ace_search_form button,
+.instant-ide-tabby-textarea .ace_replace_form button {
+	background: #fff;
+	padding: 0;
+	color: #333;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.instant-ide-tabby-textarea .ace_replace_form button {
+	padding: 0 5px;
+}
+
+.instant-ide-tabby-textarea .ace_search_form button:hover,
+.instant-ide-tabby-textarea .ace_replace_form button:hover {
+	background: #eee;
+}
+
+.swal-overlay {
+	overflow-y: initial;
+}
+
+.resource-box {
+	background: #f5f5f5;
+	border: 1px solid #eee;
+	margin: 0 10px 10px;
+	padding: 1px 10px;
+}
+
+.resource-box h5 {
+	color: #014662;
+	font-family: Georgia, serif;
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+.resource-box p {
+	color: #555;
+	font-family: Georgia, serif;
+	font-size:13px;
+	text-align: justify;
+}
+
+.bg-box {
+	background: #fff;
+	border: none;
+	margin: 0 10px 10px;
+	padding: 0 5px;
+}
+
+.bg-box-licenses {
+    background: #f5f5f5;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 0 -15px 15px;
+    padding: 0 15px 0;
+    overflow: hidden;
+}
+
+#instant-ide-dev-path-error {
+	color: #333;
+}
+
+.instant-ide-theme-dark #instant-ide-dev-path-error {
+	color: #eee;
+}
+
+#instant-ide-child-not-active-message {
+	border: 1px solid #ffb900;
+	border-left: 5px solid #ffb900;
+	padding: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+	display: block;
+}
+
+#readme-box {
+	background: #FFFFFF;
+	border: none;
+	margin: 0 10px 10px;
+	padding: 0 10px;
+}
+
+#readme-box h5 {
+	color: #014662;
+	font-family: Georgia,serif;
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+#readme-box p {
+	color: #333333;
+	font-family: Georgia, serif;
+	font-size: 13px;
+	text-align: justify;
+}
+
+.notice-box {
+	background: #FFFBCC;
+	border: 1px solid #E6DB55;
+	color: #555555;
+	text-align: center;
+	margin: 0 0 15px;
+	padding: 5px 8px;
+}
+
+.instant-ide-message-popup-box.ui-front {
+	z-index: 102;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.instant-ide-message-popup-box .ui-widget-header {
+	display: none;
+}
+
+.instant-ide-message-popup-box .ui-widget-content {
+	border-color: #ddd;
+}
+
+.instant-ide-message-popup-box .ui-button,
+.instant-ide-message-popup-box .ui-button:hover,
+.instant-ide-message-popup-box .ui-button:focus {
+	background: none;
+}
+
+.button {
+	font-size: 13px !important;
+	border: 1px solid #BBBBBB !important;
+	margin: 0 5px 0 0!important;
+	color: #666 !important;
+	text-align: center !important;
+	float: right !important;
+}
+
+.wp-core-ui .button {
+	height: 25px;
+	margin: 0;
+	padding: 0 10px 1px;
+	font-size: 13px;
+	vertical-align: middle;
+	line-height: 23px;
+}
+
+.instant-ide-settings-button.button {
+	background: #333333 !important;
+	border: none !important;
+	height: 36px !important;
+	color: #FFFFFF !important;
+	padding: 7px 10px !important;
+	margin: 0 !important;
+	text-shadow: none !important;
+	float: left !important;
+	-webkit-border-radius: 0 !important;
+	border-radius: 0 !important;
+	-webkit-box-shadow: 0 0 0 #FFFFFF !important;
+	box-shadow: 0 0 0 #FFFFFF !important;
+}
+
+.instant-ide-settings-button.button:hover {
+	background: #2EA2CC !important;
+}
+
+.instant-ide-settings-button.button.rounded-button {
+	-webkit-border-radius: 3px !important;
+	border-radius: 3px !important;
+}
+
+.default-text-active {
+	color: #AAAAAA !important;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.instant-ide-settings-save-container {
+	padding: 10px 15px 15px;
+	float: left;
+	position: relative;
+}
+
+.instant-ide-file-editor-textarea-form input[type=submit] {
+	background: #444;
+	border: 0;
+	width: 100px;
+	color: #fff;
+    margin: -8px 2px -8px -1px;
+    padding: 6px 5px 7px;
+	font-size: 13px;
+	font-weight: normal;
+	text-transform: none;
+	line-height: 1.625;
+	float: left;
+	cursor: pointer;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	position: absolute;
+	left: -99999px;
+}
+
+.instant-ide-file-editor-textarea-form input[type=submit]:hover,
+.instant-ide-file-editor-textarea-form input[type=submit].instant-ide-file-editor-save-button-active:hover {
+	background: #2EA2CC;
+}
+
+.instant-ide-file-editor-textarea-form input[type=submit].instant-ide-file-editor-save-button-active {
+	background: #b0313d;
+}
+
+#instant-ide-image-file-upload-form {
+	background: #eee;
+	border: 1px solid #ddd;
+	max-width: 300px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.instant-ide-image-file-upload-status {
+	background: #fff;
+	margin-top: 10px;
+	padding: 10px 15px;
+	font-style: italic;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.instant-ide-image-file-upload-status .dashicons {
+	width: 37px;
+	height: 37px;
+	padding-right: 8px;
+	font-size: 37px;
+	vertical-align: middle;
+}
+
+.instant-ide-child-theme-images-list {
+	width: 100%;
+	margin: 5px 0;
+	float: left;
+}
+
+.instant-ide-child-theme-images-list-item {
+	border: 1px solid #ddd;
+	width: 100%;
+	max-width: 280px;
+	margin: 10px;
+	float: left;
+}
+
+.instant-ide-listed-image-header,
+.instant-ide-listed-image-footer {
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-listed-image-footer {
+	border: 0;
+	border-top: 1px solid #ddd;
+	padding: 3px;
+}
+
+.instant-ide-listed-image-name {
+	width: 100%;
+	max-width: 210px;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-image-rename-button,
+.instant-ide-image-delete-button,
+.instant-ide-image-info-button {
+	border-left: 1px solid #ddd;
+	padding: 5px 10px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	float: right;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-image-info-button,
+.instant-ide-image-delete-button {
+	border: 0;
+	padding: 0;
+	font-size: 20px;
+}
+
+.instant-ide-image-info-button {
+	float: left;
+}
+
+.instant-ide-image-rename-button:hover,
+.instant-ide-image-info-button:hover,
+.instant-ide-image-delete-button:hover {
+	background: #ddd;
+	cursor: pointer;
+}
+
+.instant-ide-image-delete-all-button-container {
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+.instant-ide-listed-image-inner,
+.instant-ide-listed-image-info-inner {
+	width: 100%;
+	padding: 10px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-listed-image-info-inner {
+	display: none;
+}
+
+.instant-ide-listed-image-inner .instant-ide-ajax-save-spinner,
+.instant-ide-listed-image-inner .instant-ide-saved {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+}
+
+.instant-ide-listed-image-inner .instant-ide-saved {
+	background: #eee;
+	width: 100%;
+	height: 100%;
+	color: #333;
+	text-align: center;
+}
+
+img.instant-ide-listed-image {
+	width: 100px;
+	margin: 0 auto;
+	float: none;
+	display: block;
+}
+
+.instant-ide-image-info-item-heading,
+.instant-ide-image-info-item {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 5px;
+	display: block;
+}
+
+.instant-ide-image-info-item-heading {
+	text-align: center;
+	font-weight: bold;
+}
+
+.instant-ide-image-info-item .dashicons {
+	padding-right: 3px;
+}
+
+.instant-ide-image-delete-all-button-container .instant-ide-saved {
+	width: 145px;
+	margin: 1px 0 0;
+	padding: 3px 5px;
+	text-align: center;
+}
+
+.instant-ide-image-delete-all-button {
+	margin: 0 0 5px !important;
+	float: left !important;
+}
+
+#instant-ide-image-manager-missing-folder-message {
+	background: #fff;
+	padding: 0 20px;
+	float: left;
+}
+
+#instant-ide-theme-creator-button-container {
+	position: relative;
+}
+
+.instant-ide-ajax-save-spinner {
+	width: 20px;
+	height: 20px;
+	margin: 2px 0 0 5px;
+	float: left;
+	display: none;
+}
+
+#instant-ide-settings-form .instant-ide-ajax-save-spinner {
+	top: 15px;
+	left: 121px;
+}
+
+#instant-ide-file-editor-upload-form .instant-ide-ajax-save-spinner {
+	margin: 0 40px 0 0;
+	float: right;	
+}
+
+.instant-ide-saved,
+.instant-ide-version-display {
+	margin: 0;
+	padding: 6px;
+	color: #333;
+	font-size: 12px;
+	float: left;
+	display: none;
+}
+
+.instant-ide-version-display {
+	float: right;
+	display: block;
+}
+
+.instant-ide-theme-dark .instant-ide-saved,
+.instant-ide-theme-dark .instant-ide-version-display {
+	color: #eee;
+}
+
+#instant-ide-settings-form .instant-ide-saved {
+	width: 100px;
+	padding: 5px;
+	top: 14px;
+	left: 122px;
+	text-align: center;
+}
+
+#instant-ide-file-control-save-container .instant-ide-saved {
+	top: 4px;
+}
+
+#instant-ide-settings-form .dashicons {
+	width: 20px;
+	height: 20px;
+	color: #444;
+	font-size: 20px;
+	vertical-align: bottom;
+}

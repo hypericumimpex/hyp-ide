@@ -1,0 +1,1241 @@
+body {
+	font-size: 13px;
+	font-family: "Open Sans",sans-serif;
+}
+
+p, ul, ol, blockquote, input, select {
+	font-size:12px;
+}
+
+a, a:link, a:visited {
+	color: #0074A2;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+a:hover, a:active  {
+	color: #2EA2CC;
+	text-decoration: none;
+}
+
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-tree-editor-container a,
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-tree-editor-container a:link,
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-tree-editor-container a:visited {
+	color: #eee;
+}
+
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-tree-editor-container a:hover,
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-tree-editor-container a:active {
+	color: #fff;
+}
+
+#instant-ide-manager-install-directory-name,
+#instant-ide-manager-uninstall-directory-name {
+	width: 250px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+	padding: 2px 5px;
+	color: #32373c;
+	display: block;
+	outline: 0;
+	transition: 50ms border-color ease-in-out;
+}
+
+#instant-ide-manager-uninstall-directory-name {
+	background: none;
+}
+
+#instant-ide-manager-install-directory-name:focus {
+	border-color: #5b9dd9;
+	box-shadow: 0 0 2px rgba(30,140,190,.8);
+}
+
+#instant-ide-manager-ajax-install-spinner-container > span,
+#instant-ide-manager-ajax-uninstall-spinner-container > span {
+	float: left;
+}
+
+#instant-ide-manager-iide-viewer-iframe {
+	width: 100%;
+	height: 557px;
+	border: 1px solid #E8E8E8;
+}
+
+#instant-ide-manager-htaccess-open-button {
+	background: #ddd;
+	border-radius: 3px;
+	margin: 16px 0 0 20px;
+	padding: 8px;
+	font-size: 14px;
+	position: absolute;
+	top: 0;
+	left: 200px;
+}
+
+#instant-ide-manager-htaccess-open-button {
+	left: 200px;
+}
+
+#instant-ide-manager-htaccess-open-button:hover {
+	background: #ccc;
+	cursor: pointer;
+}
+
+#instant-ide-manager-htaccess-overlay {
+	background: #F1F1F1;
+	width: 100%;
+	height: 100%;
+	padding: 8px 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#instant-ide-manager-htaccess-outer-wrap {
+	background: #F9F9F9;
+	border: 1px solid #DDDDDD;
+	width: 100%;
+	max-width: 1180px;
+	margin: 50px auto 0;
+	padding: 5px 10px 10px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-shadow: 5px 5px 0px #DDDDDD;
+	box-shadow: 5px 5px 0px #DDDDDD;
+}
+
+#instant-ide-manager-htaccess-close {
+	background: #DDDDDD;
+	padding: 5px 8px;
+	font-size: 16px;
+	font-weight: bold;
+	float: right;
+	cursor: pointer;
+}
+
+#instant-ide-manager-htaccess-wrap {
+	width: 100%;
+	margin-bottom: 10px;
+	float: left;
+}
+
+#instant-ide-manager-htaccess-title {
+	margin: 0;
+	padding: 5px;
+	font-size: 12px;
+	float: left;
+}
+
+#instant-ide-manager-htaccess-use-last-save:hover {
+	cursor: pointer;
+}
+
+#instant-ide-manager-htaccess {
+	width: 100%;
+}
+
+#instant-ide-manager-ajax-install-spinner-container,
+#instant-ide-manager-ajax-uninstall-spinner-container,
+#instant-ide-manager-htaccess-button-container,
+#instant-ide-manager-admin-access-pin-form-input-container,
+#instant-ide-manager-admin-access-check-form-input-container {
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+#instant-ide-manager-admin-access-check-form-input-container {
+	padding: 10px 0;
+}
+
+#instant-ide-manager-htaccess-open-button .instant-ide-manager-ajax-save-spinner,
+#instant-ide-manager-htaccess-button-container .instant-ide-manager-ajax-save-spinner,
+#instant-ide-manager-htaccess-button-container .instant-ide-manager-saved,
+#instant-ide-manager-admin-access-pin-form-input-container .instant-ide-manager-ajax-save-spinner,
+#instant-ide-manager-admin-access-pin-form-input-container .instant-ide-manager-saved,
+#instant-ide-manager-admin-access-check-form-input-container .instant-ide-manager-ajax-save-spinner,
+#instant-ide-manager-admin-access-check-form-input-container .instant-ide-manager-saved {
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 112px;
+	float: left;
+	display: none;
+}
+
+#instant-ide-manager-ajax-install-spinner-container .instant-ide-manager-ajax-save-spinner,
+#instant-ide-manager-ajax-uninstall-spinner-container .instant-ide-manager-ajax-save-spinner {
+	margin: 0;
+	position: absolute;
+	top: 9px;
+	right: 135px;
+	float: right;
+	display: none;
+}
+
+#instant-ide-manager-ajax-uninstall-spinner-container .instant-ide-manager-ajax-save-spinner {
+	right: 150px;
+}
+
+#instant-ide-manager-htaccess-open-button .instant-ide-manager-ajax-save-spinner {
+	top: 4px;
+	left: 80px;
+}
+
+#instant-ide-manager-admin-access-check-form-input-container .instant-ide-manager-ajax-save-spinner,
+#instant-ide-manager-admin-access-check-form-input-container .instant-ide-manager-saved {
+	top: 9px;
+	left: auto;
+	right: 75px;
+}
+
+#instant-ide-manager-admin-access-pin-form-input-container .instant-ide-manager-ajax-save-spinner,
+#instant-ide-manager-admin-access-pin-form-input-container .instant-ide-manager-saved {
+	top: 0;
+	left: auto;
+	right: 120px;
+}
+
+.instant-ide-manager-ajax-save-spinner {
+	width: 25px;
+	height: 25px;
+}
+
+#instant-ide-manager-htaccess-title .instant-ide-manager-ajax-save-spinner {
+	width: 16px;
+	height: 16px;
+	margin-bottom: -3px;
+}
+
+.instant-ide-manager-saved {
+	background: #2EA2CC;
+	padding: 4px 5px;
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#instant-ide-manager-admin-wrap {
+	max-width: 1980px;
+	margin: 10px 0 0;
+	padding: 0;
+	clear: both;
+}
+
+#instant-ide-manager-admin-wrap,
+.instant-ide-manager-settings-wrap,
+.instant-ide-manager-settings-wrap h3,
+.instant-ide-manager-optionbox-outer-1col,
+.instant-ide-manager-optionbox-inner-1col,
+.instant-ide-manager-optionbox-outer-2col,
+.instant-ide-manager-optionbox-inner-2col,
+.instant-ide-manager-child-theme-export-wrap,
+.instant-ide-manager-tabby-textarea,
+.notice-box {
+	width: 100%;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-manager-settings-wrap h3 {
+	border:0;
+	border-bottom: 1px solid #ddd;
+	margin: 0;
+	padding: 8px 0;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	clear: both;
+}
+
+.instant-ide-manager-settings-wrap h3,
+.instant-ide-manager-optionbox-outer-2col {
+	background: #FFFFFF;
+	border: 1px solid #DFDFDF;
+	border-right: 0;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.instant-ide-manager-optionbox-inner-2col h4 {
+	background: #FFFFFF;
+	border-bottom: 1px solid #F0F0F0;
+	color: #222222;
+	font-size: 14px;
+	margin: 0 0 10px;
+	padding: 8px 0;
+	text-align: center;
+}
+
+.instant-ide-manager-optionbox-inner-1col {
+	background: #FFFFFF;
+	border: 1px solid #DFDFDF;
+	margin: 0 0 15px;
+	padding: 0;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+#instant-ide-manager-admin-wrap .instant-ide-manager-optionbox-inner-1col {
+	background: none;
+	border: none;
+}
+
+.instant-ide-manager-optionbox-outer-2col {
+	background: #FFFFFF;
+	border: 1px solid #DFDFDF;
+	margin: 0 0 15px;
+	padding: 0;
+	float: left;
+}
+
+.instant-ide-manager-optionbox-inner-2col {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.instant-ide-manager-optionbox-2col-left-wrap {
+	width: 49%;
+	float: left;
+}
+
+.instant-ide-manager-optionbox-2col-right-wrap {
+	width: 49%;
+	float: right;
+}
+
+#instant-ide-manager-settings-nav-info-box .instant-ide-manager-optionbox-2col-left-wrap {
+	width: 39%;
+}
+
+#instant-ide-manager-settings-nav-info-box .instant-ide-manager-optionbox-2col-right-wrap {
+	width: 59%;
+}
+
+.instant-ide-manager-child-theme-export-2col-left,
+.instant-ide-manager-child-theme-export-2col-right {
+	width: 47%;
+	margin: 10px;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-manager-child-theme-export-2col-right {
+	float: right;
+}
+
+#instant-ide-manager-ace-editor-theme-preview {
+	max-width: 583px;
+	margin-top: -20px;
+	padding: 0 15px;
+}
+
+#instant-ide-manager-ace-editor-theme-preview span {
+	background: #eee;
+	border: 1px solid #ddd;
+	border-bottom: 0;
+	margin-right: -2px;
+	padding: 3px 7px;
+	color: #666;
+	font-style: italic;
+	float: right;
+	-webkit-border-radius: 10px 2px 0 0;
+	border-radius: 10px 2px 0 0;
+}
+
+#instant-ide-manager-ace-editor-theme-preview img {
+	border: 1px solid #ddd;
+	width: 100%;
+	height: auto;
+}
+
+#instant-ide-manager-screenshot-image-upload-container {
+	background: #f5f5f5;
+	border: 1px solid #eee;
+	width: 180px;
+	padding: 5px;
+	text-align: center;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#instant-ide-manager-screenshot-image-upload-container span {
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.instant-ide-manager-file-editor-textarea-container {
+	height: 100%;
+	position: relative;
+	display: none;
+}
+
+.instant-ide-manager-file-editor-textarea-container h3 {
+	position: relative;
+}
+
+.instant-ide-manager-file-editor-go-back-button {
+	background: #444;
+	padding: 3px 6px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.instant-ide-manager-file-tree-editor-expanded .instant-ide-manager-file-editor-expand,
+.instant-ide-manager-file-editor-contract {
+	display: none;
+}
+
+.instant-ide-manager-file-tree-editor-expanded .instant-ide-manager-file-editor-contract,
+.instant-ide-manager-file-editor-expand {
+	display: block;
+}
+
+.instant-ide-manager-file-tree-editor-expanded .ace_editor {
+	width: 100%;
+	height: -webkit-calc(100% - 35px);
+	height: calc(100% - 35px);
+	position: absolute;
+	top: 36px;
+	left: 0;
+}
+
+.instant-ide-manager-file-editor-copy,
+.instant-ide-manager-file-editor-expand,
+.instant-ide-manager-file-editor-contract {
+	background: #eee;
+	border: 0;
+	width: 66px;
+	padding: 4px;
+	color: #333;
+	font-size: 11px;
+	font-style: italic;
+	position: absolute;
+	top: 7px;
+	right: 35px;
+	cursor: pointer;
+	z-index: 1;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.instant-ide-manager-ace-active-theme-dark .instant-ide-manager-file-editor-copy,
+.instant-ide-manager-ace-active-theme-dark .instant-ide-manager-file-editor-expand,
+.instant-ide-manager-ace-active-theme-dark .instant-ide-manager-file-editor-contract {
+	background: #444;
+	color: #eee;
+}
+
+.instant-ide-manager-file-editor-expand,
+.instant-ide-manager-file-editor-contract {
+	width: auto;
+	height: auto;
+	padding: 2px;
+	top: 5px;
+	right: 5px;
+	font-size: 20px;
+	font-style: normal;
+}
+
+#instant-ide-manager-functions-copy:hover {
+	background: #ddd;
+}
+
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-functions-copy:hover {
+	background: #555;
+}
+
+#instant-ide-manager-functions-copied {
+	cursor: initial;
+}
+
+.instant-ide-manager-file-editor-heading {
+	background: #eee;
+	border: 1px solid #ddd;
+	margin: -3px 107px -10px 0;
+	padding: 5px 13px 6px 17px;
+	color: #333;
+	font-weight: normal;
+	float: right;
+	-webkit-border-radius: 10px 2px 0 0;
+	border-radius: 10px 2px 0 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+.instant-ide-manager-ace-active-theme-dark .instant-ide-manager-file-editor-heading {
+	background: #444;
+	border-color: #222;
+	color: #eee;
+}
+
+#instant-ide-manager-file-tree-editor-container {
+	width: 100%;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#instant-ide-manager-file-tree-editor-container.instant-ide-manager-file-tree-editor-expanded {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999999;
+}
+
+#instant-ide-manager-file-tree-container {
+	background: #fff;
+	border: 1px solid #ddd;
+	width: 20%;
+	height: 584px;
+	overflow: auto;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#instant-ide-manager-file-editor-container {
+	border: 1px solid #ddd;
+	border-top: 0;
+	border-left: 0;
+	width: 80%;
+	float: right;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-manager-file-tree-editor-expanded #instant-ide-manager-file-tree-container,
+.instant-ide-manager-file-tree-editor-expanded #instant-ide-manager-file-editor-container {
+	height: 100%;
+}
+
+#instant-ide-manager-file-editor-file-control-settings-icon {
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	height: 35px;
+	color: #aaa;
+	text-align: right;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-editor-file-control-settings-icon,
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-editor-file-control-form,
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-tree-container,
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-editor-container,
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-editor-reload-page,
+.instant-ide-manager-ace-active-theme-dark .instant-ide-manager-file-tree li.ctft-file-active,
+.instant-ide-manager-ace-active-theme-dark .instant-ide-manager-settings-wrap h3 {
+	background-color: #333;
+	border-color: #222;
+}
+
+.instant-ide-manager-ace-active-theme-dark .instant-ide-manager-settings-button.button {
+	background: #444 !important;
+}
+
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-tree-container::-webkit-scrollbar,
+.instant-ide-manager-ace-active-theme-dark .ace_scrollbar-v::-webkit-scrollbar,
+.instant-ide-manager-ace-active-theme-dark .ace_scrollbar-h::-webkit-scrollbar {
+	background-color: #333;
+}
+
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-tree-container::-webkit-scrollbar,
+.instant-ide-manager-ace-active-theme-dark .ace_scrollbar-v::-webkit-scrollbar {
+	width: 10px;
+}
+
+.instant-ide-manager-ace-active-theme-dark .ace_scrollbar-h::-webkit-scrollbar {
+	height: 10px;
+}
+
+.instant-ide-manager-ace-active-theme-dark #instant-ide-manager-file-tree-container::-webkit-scrollbar-thumb,
+.instant-ide-manager-ace-active-theme-dark .ace_scrollbar-v::-webkit-scrollbar-thumb,
+.instant-ide-manager-ace-active-theme-dark .ace_scrollbar-h::-webkit-scrollbar-thumb {
+	background-color: #474747;
+	border: 1px solid #555;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+
+#instant-ide-manager-file-editor-file-control-settings-icon .dashicons:before {
+	padding: 7px 3px 0 0;
+	float: right;
+	cursor: pointer;
+}
+
+#instant-ide-manager-file-tree-editor-container .dashicons:hover {
+	color: #2EA2CC;
+}
+
+#instant-ide-manager-file-editor-reload-page {
+	background: #f5f5f5;
+	border-right: 1px solid #eee;
+	padding: 7px 5px 9px;
+	font-size: 12px;
+	font-family: Tahoma, sans-serif;
+	font-style: italic;
+	float: left;
+}
+
+#instant-ide-manager-file-editor-file-control-settings-icon a {
+	color: #aaa;
+	text-decoration: underline;
+}
+
+#instant-ide-manager-file-editor-file-control-form {
+	background: #f5f5f5;
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	height: 200px;
+	padding: 10px;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: none;
+}
+
+.instant-ide-manager-file-editor-control-container {
+	margin: 5px 0 9px;
+}
+
+.instant-ide-manager-file-editor-control-text {
+	color: #888;
+	font-style: italic;
+}
+
+#instant-ide-manager-file-editor-control-action,
+.instant-ide-manager-file-editor-control-input {
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+#instant-ide-manager-file-control-save-container {
+	position: relative;
+}
+
+.instant-ide-manager-file-tree {
+	width: 100%;
+	margin: 0;
+	padding: 10px 0 0 10px;
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	line-height: 1.5;
+	float: left;
+	-webkit-font-smoothing: auto;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-manager-file-tree-short {
+	height: 347px;
+}
+
+.instant-ide-manager-file-tree-editor-expanded .instant-ide-manager-file-tree,
+.instant-ide-manager-file-tree-editor-expanded .instant-ide-manager-file-tree-short {
+	height: 100%;
+}
+
+.instant-ide-manager-file-tree a:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.instant-ide-manager-file-tree li {
+	margin: 0 10px;
+	padding: 3px 5px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.instant-ide-manager-file-tree #ctft-root-directory {
+	margin-left: -5px;
+}
+
+.instant-ide-manager-file-tree #ctft-root-directory a,
+.instant-ide-manager-file-tree #ctft-root-directory a:hover {
+	color: #333;
+	cursor: default;
+}
+
+.instant-ide-manager-ace-active-theme-dark .instant-ide-manager-file-tree #ctft-root-directory a,
+.instant-ide-manager-ace-active-theme-dark  #ctft-root-directory a:hover {
+	color: #eee;	
+}
+
+.instant-ide-manager-file-tree li.ctft-directory a {
+	background: url(images/folder-icon.png) no-repeat;
+	padding: 0 0 1px 25px;
+}
+
+.instant-ide-manager-file-tree li.ctft-directory ul {
+	padding-top: 5px;
+}
+
+.instant-ide-manager-file-tree li.ctft-file a {
+	background: url(images/txt-icon.png) no-repeat;
+	padding: 1px 0 2px 24px;
+	color: #333;
+	text-decoration: none;
+	cursor: default;
+}
+
+.instant-ide-manager-file-tree li.ctft-file a:hover {
+	color: #333;
+}
+
+.instant-ide-manager-file-tree li.ctft-file-edit a {
+	color: #0074A2;
+	cursor: pointer;
+}
+
+.instant-ide-manager-file-tree li.ctft-file-edit a:hover {
+	color: #2EA2CC;
+}
+
+.instant-ide-manager-file-tree li.ctft-file-active {
+	background: #eee;
+}
+
+.instant-ide-manager-ace-active-theme-dark .instant-ide-manager-file-tree li.ctft-file-active {
+	background: #262626;
+}
+
+.instant-ide-manager-file-tree li.ctft-file-active a,
+.instant-ide-manager-file-tree li.ctft-file-active a:hover {
+	color: #333;
+}
+
+.instant-ide-manager-ace-active-theme-dark .instant-ide-manager-file-tree li.ctft-file-active a,
+.instant-ide-manager-ace-active-theme-dark .instant-ide-manager-file-tree li.ctft-file-active a:hover {
+	color: #eee;
+}
+
+.instant-ide-manager-file-tree li.ext-png a,
+.instant-ide-manager-file-tree li.ext-jpg a,
+.instant-ide-manager-file-tree li.ext-jpeg a,
+.instant-ide-manager-file-tree li.ext-gif a,
+.instant-ide-manager-file-tree li.ext-ico a,
+.instant-ide-manager-file-tree li.ext-tif a,
+.instant-ide-manager-file-tree li.ext-tiff a,
+.instant-ide-manager-file-tree li.ext-psd a,
+.instant-ide-manager-file-tree li.ext-bmp a {
+	background: url(images/image-icon.png) no-repeat;
+}
+
+.instant-ide-manager-file-tree li.ext-css a,
+.instant-ide-manager-file-tree li.ext-less a,
+.instant-ide-manager-file-tree li.ext-sass a {
+	background: url(images/css-icon.png) no-repeat;
+}
+
+.instant-ide-manager-file-tree li.ext-js a,
+.instant-ide-manager-file-tree li.ext-json a {
+	background: url(images/js-icon.png) no-repeat;
+}
+
+.instant-ide-manager-file-tree li.ext-php a {
+	background: url(images/php-icon.png) no-repeat;
+}
+
+.instant-ide-manager-file-tree li.ext-xml a {
+	background: url(images/xml-icon.png) no-repeat;
+}
+
+.instant-ide-manager-file-tree li.ext-zip a {
+	background: url(images/zip-icon.png) no-repeat;
+}
+
+.instant-ide-manager-tabby-textarea .ace_search {
+	background: #eee;
+}
+
+.instant-ide-manager-tabby-textarea .ace_search_form input,
+.instant-ide-manager-tabby-textarea .ace_replace_form input {
+	border: 0;
+}
+
+.ace_tooltip {
+	color: #333;
+	font-size: 13px;
+}
+
+.ace_tooltip hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #fafafa;
+	margin: 0;
+}
+
+button.instant-ide-manager-code-builder-output-cut {
+	background: #eee;
+	border: 1px solid #ddd;
+	border-top: 0;
+	padding: 5px;
+	margin: -44px 22px 0 0;
+	width: 458px;
+	color: #444;
+	font-size: 14px;
+	float: right;
+	-webkit-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+
+button#php-builder-output-cut-button,
+button#php-builder-output-copied-button {
+	margin: 0 14px 15px 0;
+	width: 775px;
+}
+
+.instant-ide-manager-tabby-textarea .ace_search_form button,
+.instant-ide-manager-tabby-textarea .ace_replace_form button {
+	background-color: #fff;
+	padding: 0;
+	color: #333;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.instant-ide-manager-tabby-textarea .ace_replace_form button {
+	padding: 0 5px;
+}
+
+.instant-ide-manager-tabby-textarea .ace_search_form button:hover,
+.instant-ide-manager-tabby-textarea .ace_replace_form button:hover {
+	background-color: #eee;
+}
+
+#instant-ide-manager-admin-wrap .resource-box {
+	margin: 10px 15px;
+}
+
+#instant-ide-manager-admin-wrap .resource-box h5 {
+	color: #014662;
+	font-family: Georgia, serif;
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+#instant-ide-manager-admin-wrap .resource-box p {
+	color: #555;
+	font-family: Georgia, serif;
+	font-size:13px;
+	text-align: justify;
+}
+
+.bg-box {
+	background: #fff;
+	border: none;
+	margin: 0 10px 10px;
+	padding: 0 5px;
+}
+
+.bg-box-licenses {
+    background: #f5f5f5;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 0 -15px -10px;
+    padding: 0 15px 0;
+    overflow: hidden;
+}
+
+#instant-ide-manager-child-not-active-message {
+	border: 1px solid #ffb900;
+	border-left: 5px solid #ffb900;
+	padding: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+	display: block;
+}
+
+#readme-box {
+	background: #FFFFFF;
+	border: none;
+	margin: 0 10px 10px;
+	padding: 0 10px;
+}
+
+#readme-box h5 {
+	color: #014662;
+	font-family: Georgia,serif;
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+#readme-box p {
+	color: #333333;
+	font-family: Georgia, serif;
+	font-size: 13px;
+	text-align: justify;
+}
+
+.notice-box {
+	background: #FFFBCC;
+	border: 1px solid #E6DB55;
+	color: #555555;
+	text-align: center;
+	margin: 0 0 15px;
+	padding: 5px 8px;
+}
+
+.button {
+	font-size: 13px !important;
+	border: 1px solid #BBBBBB !important;
+	margin: 0 5px 0 0!important;
+	color: #666 !important;
+	text-align: center !important;
+	float: right !important;
+}
+
+.button#instant-ide-manager-install-button,
+.button#instant-ide-manager-uninstall-button {
+	margin-top: 9px !important;
+	margin-bottom: 0px !important;
+}
+
+.wp-core-ui .button {
+	height: 25px;
+	margin: 0;
+	padding: 0 10px 1px;
+	font-size: 13px;
+	vertical-align: middle;
+	line-height: 23px;
+}
+
+.instant-ide-manager-settings-button.button {
+	background: #333333 !important;
+	border: none !important;
+	height: 36px !important;
+	color: #FFFFFF !important;
+	padding: 7px 10px !important;
+	margin: 0 !important;
+	text-shadow: none !important;
+	float: left !important;
+	-webkit-border-radius: 0 !important;
+	border-radius: 0 !important;
+	-webkit-box-shadow: 0 0 0 #FFFFFF !important;
+	box-shadow: 0 0 0 #FFFFFF !important;
+}
+
+.instant-ide-manager-settings-button.button:hover {
+	background: #2EA2CC !important;
+}
+
+.instant-ide-manager-settings-button.button.rounded-button {
+	-webkit-border-radius: 3px !important;
+	border-radius: 3px !important;
+}
+
+.default-text-active {
+	color: #AAAAAA !important;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.instant-ide-manager-settings-save-container {
+	padding: 10px 15px 15px;
+	float: left;
+	position: relative;
+}
+
+.instant-ide-manager-file-editor-textarea-form input[type=submit],
+.instant-ide-manager-file-editor-textarea-form .instant-ide-manager-parent-editor-read-only-button {
+	background: #444;
+	border: 0;
+	width: 100px;
+	color: #fff;
+    margin: -8px 2px -8px -1px;
+    padding: 6px 5px 7px;
+	font-size: 13px;
+	font-weight: normal;
+	text-transform: none;
+	line-height: 1.625;
+	float: left;
+	cursor: pointer;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+.instant-ide-manager-file-editor-textarea-form .instant-ide-manager-parent-editor-read-only-button {
+	width: 70px;
+	font-style: italic;
+	cursor: default;
+}
+
+.instant-ide-manager-file-editor-textarea-form input[type=submit]:hover,
+.instant-ide-manager-file-editor-textarea-form input[type=submit].instant-ide-manager-file-editor-save-button-active:hover {
+	background: #2EA2CC;
+}
+
+.instant-ide-manager-file-editor-textarea-form input[type=submit].instant-ide-manager-file-editor-save-button-active {
+	background: #b0313d;
+}
+
+#instant-ide-manager-image-file-upload-form {
+	background: #eee;
+	border: 1px solid #ddd;
+	max-width: 300px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.instant-ide-manager-image-file-upload-status {
+	background: #fff;
+	margin-top: 10px;
+	padding: 10px 15px;
+	font-style: italic;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.instant-ide-manager-image-file-upload-status .dashicons {
+	width: 37px;
+	height: 37px;
+	padding-right: 8px;
+	font-size: 37px;
+	vertical-align: middle;
+}
+
+.instant-ide-manager-child-theme-images-list {
+	width: 100%;
+	margin: 5px 0;
+	float: left;
+}
+
+.instant-ide-manager-child-theme-images-list-item {
+	border: 1px solid #ddd;
+	width: 100%;
+	max-width: 280px;
+	margin: 10px;
+	float: left;
+}
+
+.instant-ide-manager-listed-image-header,
+.instant-ide-manager-listed-image-footer {
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-manager-listed-image-footer {
+	border: 0;
+	border-top: 1px solid #ddd;
+	padding: 3px;
+}
+
+.instant-ide-manager-listed-image-name {
+	width: 100%;
+	max-width: 210px;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	float: left;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-manager-image-rename-button,
+.instant-ide-manager-image-delete-button,
+.instant-ide-manager-image-info-button {
+	border-left: 1px solid #ddd;
+	padding: 5px 10px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	float: right;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-manager-image-info-button,
+.instant-ide-manager-image-delete-button {
+	border: 0;
+	padding: 0;
+	font-size: 20px;
+}
+
+.instant-ide-manager-image-info-button {
+	float: left;
+}
+
+.instant-ide-manager-image-rename-button:hover,
+.instant-ide-manager-image-info-button:hover,
+.instant-ide-manager-image-delete-button:hover {
+	background: #ddd;
+	cursor: pointer;
+}
+
+.instant-ide-manager-image-delete-all-button-container {
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+.instant-ide-manager-listed-image-inner,
+.instant-ide-manager-listed-image-info-inner {
+	width: 100%;
+	padding: 10px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-manager-listed-image-info-inner {
+	display: none;
+}
+
+.instant-ide-manager-saved {
+	-webkit-font-smoothing: antialiased;
+}
+
+.instant-ide-manager-listed-image-inner .instant-ide-manager-ajax-save-spinner,
+.instant-ide-manager-listed-image-inner .instant-ide-manager-saved {
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.instant-ide-manager-listed-image-inner .instant-ide-manager-saved {
+	background: #eee;
+	width: 100%;
+	height: 100%;
+	color: #333;
+	text-align: center;
+}
+
+img.instant-ide-manager-listed-image {
+	width: 100px;
+	margin: 0 auto;
+	float: none;
+	display: block;
+}
+
+.instant-ide-manager-image-info-item-heading,
+.instant-ide-manager-image-info-item {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 5px;
+	display: block;
+}
+
+.instant-ide-manager-image-info-item-heading {
+	text-align: center;
+	font-weight: bold;
+}
+
+.instant-ide-manager-image-info-item .dashicons {
+	padding-right: 3px;
+}
+
+.instant-ide-manager-image-delete-all-button-container .instant-ide-manager-ajax-save-spinner,
+.instant-ide-manager-image-delete-all-button-container .instant-ide-manager-saved {
+	top: 0;
+	left: 140px;
+}
+
+.instant-ide-manager-image-delete-all-button-container .instant-ide-manager-saved {
+	width: 145px;
+	margin: 1px 0 0;
+	padding: 3px 5px;
+	text-align: center;
+}
+
+.instant-ide-manager-image-delete-all-button {
+	margin: 0 0 5px !important;
+	float: left !important;
+}
+
+#instant-ide-manager-image-manager-missing-folder-message {
+	background: #fff;
+	padding: 0 20px;
+	float: left;
+}
+
+#instant-ide-manager-theme-creator-button-container {
+	position: relative;
+}
+
+#instant-ide-manager-settings-form .instant-ide-manager-ajax-save-spinner {
+	top: 15px;
+	left: 121px;
+}
+
+#instant-ide-manager-theme-creator-button-container .instant-ide-manager-ajax-save-spinner {
+	left: 140px;
+}
+
+#instant-ide-manager-settings-form .instant-ide-manager-saved {
+	width: 100px;
+	padding: 5px;
+	top: 14px;
+	left: 122px;
+	text-align: center;
+}
+
+#instant-ide-manager-file-control-save-container .instant-ide-manager-saved {
+	top: 4px;
+}
+
+#instant-ide-manager-settings-form .dashicons {
+	width: 20px;
+	height: 20px;
+	color: #444;
+	font-size: 20px;
+	vertical-align: bottom;
+}
+
+.instant-ide-manager-settings-button.button,
+button#php-builder-output-cut-button,
+button#php-builder-output-copied-button,
+.instant-ide-manager-file-editor-textarea-form input[type=submit],
+.instant-ide-manager-file-editor-textarea-form .instant-ide-manager-parent-editor-read-only-button,
+.instant-ide-manager-file-editor-textarea-form input[type=submit].instant-ide-manager-file-editor-save-button-active,
+.instant-ide-manager-file-editor-copy,
+.instant-ide-manager-image-rename-button,
+.instant-ide-manager-image-delete-button,
+.instant-ide-manager-image-info-button,
+.instant-ide-manager-image-delete-all-button {
+	-webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (max-width: 782px) {
+	.instant-ide-manager-optionbox-2col-left-wrap,
+	.instant-ide-manager-optionbox-2col-right-wrap,
+	#instant-ide-manager-settings-nav-info-box .instant-ide-manager-optionbox-2col-left-wrap,
+	#instant-ide-manager-settings-nav-info-box .instant-ide-manager-optionbox-2col-right-wrap,
+	.instant-ide-manager-child-theme-export-2col-left,
+	.instant-ide-manager-child-theme-export-2col-right,
+	#instant-ide-manager-file-tree-container,
+	#instant-ide-manager-file-editor-container {
+		width: 100% !important;
+		margin: 5px 0;
+		display: block;
+	}
+	#instant-ide-manager-file-editor-container {
+		border: 1px solid #ddd;
+		margin-bottom: 0;
+	}
+}
